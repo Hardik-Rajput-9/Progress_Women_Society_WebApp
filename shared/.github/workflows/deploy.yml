@@ -1,0 +1,40 @@
+name: Production CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install All Dependencies
+        # Assuming you use npm workspaces at the root. If not, this still installs everything needed.
+        run: npm install
+
+      - name: Generate Prisma Client (Backend)
+        run: |
+          cd server
+          npx prisma generate
+
+      - name: Build Backend
+        run: |
+          cd server
+          npm run build
+
+      - name: Build Frontend
+        run: |
+          cd client
+          # Note: We ignore API URL checks during CI build to prevent false failures
+          NEXT_PUBLIC_API_URL=http://localhost:5000 npm run build
