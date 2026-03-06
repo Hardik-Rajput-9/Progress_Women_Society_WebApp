@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* LIGHT MODE: Cream Background, Deep Green Foreground */
+    --background: 44 26% 93%; /* #F4EFE6 */
+    --foreground: 164 50% 11%; /* #0E2A24 */
+
+    --primary: 164 50% 11%; /* #0E2A24 */
+    --primary-foreground: 44 26% 93%; /* #F4EFE6 */
+
+    --accent: 43 76% 59%; /* #E5B94A - Gold */
+    --accent-foreground: 164 50% 11%; /* #0E2A24 */
+
+    --secondary: 25 58% 39%; /* Earthy Brown */
+    --secondary-foreground: 44 26% 93%;
+
+    --muted: 0 0% 90%;
+    --muted-foreground: 164 30% 30%;
+
+    --border: 164 50% 11% / 0.1;
+
+    --card: 0 0% 100%;
+    --card-foreground: 164 50% 11%;
+  }
+
+  .dark {
+    /* DARK MODE: Deep Green Background, Cream Foreground */
+    --background: 164 50% 11%; /* #0E2A24 */
+    --foreground: 44 26% 93%; /* #F4EFE6 */
+
+    --primary: 44 26% 93%; /* #F4EFE6 */
+    --primary-foreground: 164 50% 11%; /* #0E2A24 */
+
+    --accent: 43 76% 59%; /* Gold stays gold */
+    --accent-foreground: 164 50% 11%;
+
+    --secondary: 25 60% 65%; /* Lighter brown for dark mode contrast */
+    --secondary-foreground: 164 50% 11%;
+
+    --muted: 164 40% 15%;
+    --muted-foreground: 44 20% 70%;
+
+    --border: 44 26% 93% / 0.1;
+
+    --card: 164 50% 20%;
+    --card-foreground: 44 26% 93%;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-accent selection:text-accent-foreground transition-colors duration-300;
+  }
+}

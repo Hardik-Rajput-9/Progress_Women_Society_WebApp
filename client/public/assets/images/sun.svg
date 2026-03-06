@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-labelledby="title desc">
+  <title id="title">Sun icon</title>
+  <desc id="desc">Stylized sun with radial gradient center and eight rays</desc>
+
+  <defs>
+    <radialGradient id="sunGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFF176"/>
+      <stop offset="60%" stop-color="#FFC107"/>
+      <stop offset="100%" stop-color="#FF9800"/>
+    </radialGradient>
+  </defs>
+
+  <!-- center at 100,100 -->
+  <g transform="translate(100 100)">
+
+    <!-- sun core -->
+    <circle r="50" fill="url(#sunGrad)" stroke="#FF8A65" stroke-width="0.7"/>
+  </g>
+</svg>
