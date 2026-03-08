@@ -18,8 +18,7 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "src/*": ["./src/*"],
-      "@pws/shared": ["../shared/src/index.js"]
+      "src/*": ["./src/*"]
     }
   },
   "include": ["src/**/*.ts"],
