@@ -19,7 +19,7 @@
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "src/*": ["./src/*"],
-      "@pws/shared": ["../shared/src/index.ts"]
+      "@pws/shared": ["../shared/src/index.js"]
     }
   },
   "include": ["src/**/*.ts"],
