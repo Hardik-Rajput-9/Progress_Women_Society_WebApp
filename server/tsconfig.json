@@ -8,7 +8,6 @@
     "allowSyntheticDefaultImports": true,
     "target": "ES2021",
     "sourceMap": true,
-    "rootDir": "..",
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true,
@@ -23,6 +22,6 @@
       "@pws/shared": ["../shared/src/index.ts"]
     }
   },
-  "include": ["src/**/*.ts", "../shared/src/**/*.ts"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }
